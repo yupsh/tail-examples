@@ -3,13 +3,13 @@ package tail_test
 import (
 	"strings"
 
-	yup "github.com/gloo-foo/framework"
+	gloo "github.com/gloo-foo/framework"
 	. "github.com/yupsh/tail"
 )
 
 func ExampleTail_basic() {
 	// echo "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12" | tail
-	yup.MustRun(
+	gloo.MustRun(
 		Tail(strings.NewReader("1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12")),
 	)
 	// Output:
@@ -24,4 +24,3 @@ func ExampleTail_basic() {
 	// 11
 	// 12
 }
-
